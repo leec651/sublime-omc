@@ -35,13 +35,13 @@ During the implementation of your config, the plug-in offers auto-complete featu
 
 ### Row
 * `extract_column_value`: This transform should only need to be used in headers and footers, please don't use in regular column mappings
-* `delpay_start`: 
-* `get_term_date`: 
-* `to_ascii`: 
-* `conditional`: Used to find the result of a binary operation used on two values within a record. Available options: eq, contains, le, not_.
-* `to_upper`: 
-* `arithmetic`: 
-* `replace_regex_matches`: 
+* `delpay_start`: This is way too specific. Lucy :(
+* `get_term_date`: If the status is cancelled then return the day before the eff_date as the term_date. Otherwise return the inclusive term_date, in BigQuery the term_date is exclusive so a 2018 plan would have a term_date of 2019-01-01, most vendors want an inclusive term date so 2018-12-31.
+* `to_ascii`:  Returns an object where string values are converted to ascii.
+* `conditional`: Used to find the result of a binary operation used on two values within a record. Available options: `eq`, `contains`, `le`, and `not_`.
+* `to_upper`: Convert stirng to uppercase
+* `arithmetic`: Return value_one operand value_two
+* `replace_regex_matches`: Replaces the characters matched by regex_pattern with replacement.
 
 ### Record
 * `aggregate_value`: Take the final aggregate value after processing all records, for the specified aggregate_function_name.
