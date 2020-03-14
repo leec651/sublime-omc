@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>content</key>
+  <string>- function: row.common.conditional
+  arguments:
+    left_operand: ${1:left}
+    right_operand: ${2:right}
+    operation: '${3:eq}'</string>
+  <key>name</key>
+  <string>Row</string>
+  <key>scope</key>
+  <string>source.yaml</string>
+  <key>tabTrigger</key>
+  <string>conditional</string>
+</dict>
+</plist>

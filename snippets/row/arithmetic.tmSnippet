@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>content</key>
+  <string>- function: row.common.arithmetic
+  arguments:
+    value_one: ${1:value_one}
+    operand: '${2:operand}'
+    value_two: ${3:value_two}</string>
+  <key>name</key>
+  <string>Row</string>
+  <key>scope</key>
+  <string>source.yaml</string>
+  <key>tabTrigger</key>
+  <string>arithmetic</string>
+</dict>
+</plist>

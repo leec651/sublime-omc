@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>content</key>
+  <string>transformers:
+  - function: row.common.replace_regex_matches
+    arguments:
+      regex_pattern: ${1:'^\\s+|[:,.]|\\s+\$\\'}  # Trims whitespace and removes the characters within the brackets</string>
+  <key>name</key>
+  <string>xformer.Row</string>
+  <key>scope</key>
+  <string>source.yaml</string>
+  <key>tabTrigger</key>
+  <string>replace_regex_matches</string>
+</dict>
+</plist>
