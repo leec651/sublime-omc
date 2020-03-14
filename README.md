@@ -12,10 +12,11 @@ The plug-in currently supports generating empty csv and fixed width templates. T
 <img src="https://i.imgur.com/w8sEf01.png" width="30%">
 
 ### Auto-complete Transformer
-While writing the config, the plug-in will 
+During the implementation of your config, the plug-in offers auto-complete features for most of the common transfoemr functions avaialbe.
 
 
 ## Available Transformer
+### Field
 * `add_relativedelta`
 * `fixed_value`
 * `format_datetime_field`
@@ -28,6 +29,9 @@ While writing the config, the plug-in will
 * `replace_regex_matches`
 * `substring`
 * `truncate`
+
+### Row
+TBD 
 
 
 ## Tip
