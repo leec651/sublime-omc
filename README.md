@@ -34,13 +34,20 @@ During the implementation of your config, the plug-in offers auto-complete featu
 * `truncate`: truncate up to # of characters.
 
 ### Row
-TBD 
-
+* `extract_column_value`: This transform should only need to be used in headers and footers, please don't use in regular column mappings
+* `delpay_start`: 
+* `get_term_date`: 
+* `to_ascii`: 
+* `conditional`: Used to find the result of a binary operation used on two values within a record
+* `to_upper`: 
+* `arithmetic`: 
+* `replace_regex_matches`: 
 
 ### Record
 * `final_aggregate_value`: Take the final aggregate value after processing all records, for the specified aggregate_function_name.
 * `get_value_count_by_column_name`: Get aggregate value from an aggregate value counting function.
 ```
+Imagine we have the following 3 input records to our value count aggregator:
 {'person_name': 'bob'}
 {'person_name': 'bob'}
 {'person_name': 'bobette'}
