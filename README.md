@@ -1,17 +1,33 @@
-Sublime plug-in for `Outbound Mission Control`
-
 ## Installing
 ```
 cd "~/Library/Application Support/Sublime Text 3/Packages"
 git clone https://github.com/leec651/sublime-omc.git
 ```
 
-## Usage: Generate New Config
-Currently, the plug-in generates both empty csv and fixed width. To create an empty template, type `new` in your `.yaml`.  You will then see the folllowing. Choose the file type you are working on.
+## Usage
+
+### Generate New Config
+The plug-in currently supports generating empty csv and fixed width templates. To create an empty template, type `new` in your `.yaml`.  You will then see the folllowing suggestion. Choose the file type you are working on.
 
 <img src="https://i.imgur.com/w8sEf01.png" width="30%">
 
-## Usage: Available Transformer
+### Auto-complete Transformer
+While writing the config, the plug-in will 
+
+
+## Available Transformer
+* `add_relativedelta`
+* `fixed_value`
+* `format_datetime_field`
+* `format_phone`
+* `if_not_default`
+* `map_ethnicity`
+* `map_with_default`
+* `regex_pattern_match`
+* `replace_inf_datetime_field`
+* `replace_regex_matches`
+* `substring`
+* `truncate`
 
 
 ## Tip
