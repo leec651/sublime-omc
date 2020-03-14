@@ -38,14 +38,14 @@ During the implementation of your config, the plug-in offers auto-complete featu
 * `delpay_start`: 
 * `get_term_date`: 
 * `to_ascii`: 
-* `conditional`: Used to find the result of a binary operation used on two values within a record
+* `conditional`: Used to find the result of a binary operation used on two values within a record. Available options: eq, contains, le, not_.
 * `to_upper`: 
 * `arithmetic`: 
 * `replace_regex_matches`: 
 
 ### Record
-* `final_aggregate_value`: Take the final aggregate value after processing all records, for the specified aggregate_function_name.
-* `get_value_count_by_column_name`: Get aggregate value from an aggregate value counting function.
+* `aggregate_value`: Take the final aggregate value after processing all records, for the specified aggregate_function_name.
+* `count_by_column`: Get aggregate value from an aggregate value counting function.
 ```
 Imagine we have the following 3 input records to our value count aggregator:
 {'person_name': 'bob'}
@@ -63,7 +63,7 @@ for, using the last record in the group. Ex imagine we have this last record in 
 
 now we pass in this last record as the 'record', with column_name = 'person_name'. We get 2 back.
 ```
-* `get_value_count_by_value`: Get aggregate value from an aggregate value counting function
+* `count_by_value`: Get aggregate value from an aggregate value counting function
 ```
 Imagine we have the following 3 input records to our value count aggregator:
 
