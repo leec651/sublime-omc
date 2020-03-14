@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>content</key>
+  <string>extract_name: ${1:extract_name}
+vendor: ${2:vendor}
+output_configs:
+  file_name: '${3:file_name}'
+  format_string: '{file_name}_{today}.txt'
+  file_format: csv
+  file_delimiter: ','
+  file_type: full
+  date_format: '%Y%m%d'
+  line_terminator: "\n"
+  valet:
+    key: ${1:extract_name}
+    file_manifest: ${1:extract_name}_csv
+    destination_vendor: '${2:vendor}'
+    metadata_remote_path: '/From_Oscar'
+  s3:
+    is_zip: false
+  aggregations:
+    - aggregation_name: row_count
+      function: aggregation.common.row_count
+etl_configs:
+  regenerate_all_always: true
+  query_source: bigquery
+  query:
+    !!str
+    select * from something;
+
+  header:
+    # TODO
+
+  footer:
+    # TODO
+
+  column_mappings:
+    # TODO
+
+  row_mappings:
+    - function: row.common.to_ascii
+    - function: row.common.to_upper
+  metadata:
+    entity_key_extractor:
+      function: metadata.common.extract_key
+      arguments:
+        key: # TODO
+    valid_period_extractor:
+      function: metadata.common.get_max_time_range</string>
+  <key>name</key>
+  <string>CSV Config</string>
+  <key>scope</key>
+  <string>source.yaml</string>
+  <key>tabTrigger</key>
+  <string>new</string>
+</dict>
+</plist>

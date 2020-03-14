@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>content</key>
+  <string>extract_name: ${1:extract_name}
+vendor: ${2:vendor}
+output_configs:
+  file_name: '${1:extract_name}'
+  format_string: '{file_name}_{today}.txt'
+  file_format: fixed_width
+  file_type: full
+  date_format: '%Y%m%d'
+  line_terminator: "\n"
+  numeric_align: right
+  nonnumeric_align: left
+  numeric_pad: '0'
+  nonnumeric_pad: ' '
+  valet:
+    key: ${1:extract_name}
+    file_manifest: ${1:extract_name}_fixed_width
+    destination_vendor: '${2:vendor}'
+    metadata_remote_path: '/From_Oscar'
+  s3:
+    is_zip: false
+  aggregations:
+    - aggregation_name: row_count
+      function: aggregation.common.row_count
+etl_configs:
+  regenerate_all_always: true
+  query_source: bigquery
+  query:
+    !!str
+    select * from something;
+
+  header:
+    # TODO
+    - length: 10
+      definition:
+        - function: field.common.fixed_value
+          arguments:
+            value: 'something'
+
+  footer:
+    # TODO
+    - length: 10
+      definition:
+        - function: field.common.fixed_value
+          arguments:
+            value: 'something'
+
+  column_mappings:
+    # TODO
+    - name: column_name
+      length: 10
+
+  row_mappings:
+    - function: row.common.to_ascii
+    - function: row.common.to_upper
+  metadata:
+    entity_key_extractor:
+      function: metadata.common.extract_key
+      arguments:
+        key: # TODO
+    valid_period_extractor:
+      function: metadata.common.get_max_time_range</string>
+  <key>name</key>
+  <string>Fixed Width Config</string>
+  <key>scope</key>
+  <string>source.yaml</string>
+  <key>tabTrigger</key>
+  <string>new</string>
+</dict>
+</plist>
