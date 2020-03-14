@@ -1,4 +1,4 @@
-## Installing
+## Install
 ```
 cd "~/Library/Application Support/Sublime Text 3/Packages"
 git clone https://github.com/leec651/sublime-omc.git
@@ -12,15 +12,11 @@ The plug-in currently supports generating empty csv and fixed width templates. T
 <img src="https://i.imgur.com/w8sEf01.png" width="30%">
 <img src="https://i.imgur.com/IWlTVXv.png" width="30%">
 
-
-### Auto-complete Transformer
-During the implementation of your config, the plug-in offers auto-complete features for most of the common transfoemr functions avaialbe. For example, when you type `sub`, avaiable transformers will appear in the list. 
+### Transformer Auto-complete 
+During the implementation of your config, the plug-in offers auto-complete features for most of the transfoemrs avaialbe. For example, when you type `sub`, avaiable transformers will appear in the list. 
 
 <img src="https://i.imgur.com/OWMdzFg.png" width="30%">
-
 <img src="https://i.imgur.com/iPet12x.png" width="30%">
-
-
 
 ## Available Transformer
 ### Field
