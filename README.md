@@ -20,18 +20,18 @@ During the implementation of your config, the plug-in offers auto-complete featu
 
 ## Available Transformer
 ### Field
-* `add_relativedelta`
-* `fixed_value`
-* `format_datetime_field`
-* `format_phone`
-* `if_not_default`
-* `map_ethnicity`
-* `map_with_default`
-* `regex_pattern_match`
-* `replace_inf_datetime_field`
-* `replace_regex_matches`
-* `substring`
-* `truncate`
+* `add_relativedelta`:  add relative delta.
+* `fixed_value`: fixed value.
+* `format_datetime_field`: formate a datetime.
+* `format_phone`: format a phone number.
+* `if_not_default`: Returns a function to set a default value if the value is None or falsey. Use the function default if False should not also evaluate to the default.
+* `map_ethnicity`: Maps industry race ethnicity codes to standard codes.
+* `map_with_default`: Map with default.
+* `regex_pattern_match`: Regex match only matches first pattern from the start of the string.
+* `replace_inf_datetime_field`: Replace infinite time with 9990/01/01.
+* `replace_regex_matches`: Replaces the characters matched by regex_pattern with replacement.
+* `substring`: Ability to slice a string. Work similar to string[start:end]. End index must be smaller than length of column value.
+* `truncate`: truncate up to # of characters.
 
 ### Row
 TBD 
