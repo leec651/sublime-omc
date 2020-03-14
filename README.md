@@ -37,5 +37,42 @@ During the implementation of your config, the plug-in offers auto-complete featu
 TBD 
 
 
+### Record
+* `final_aggregate_value`: Take the final aggregate value after processing all records, for the specified aggregate_function_name.
+* `get_value_count_by_column_name`: Get aggregate value from an aggregate value counting function.
+```
+{'person_name': 'bob'}
+{'person_name': 'bob'}
+{'person_name': 'bobette'}
+
+the aggregated value count object would look like so:
+
+{'bob': 2, 'bobette': 1}
+
+Now we want to access the output values. For group footers we need to dynamically specify the key we want the count
+for, using the last record in the group. Ex imagine we have this last record in a group:
+
+{'person_name': 'bob'}
+
+now we pass in this last record as the 'record', with column_name = 'person_name'. We get 2 back.
+```
+* `get_value_count_by_value`: Get aggregate value from an aggregate value counting function
+```
+Imagine we have the following 3 input records to our value count aggregator:
+
+{'person_name': 'bob'}
+{'person_name': 'bob'}
+{'person_name': 'bobette'}
+
+the aggregated value count object would look like so:
+
+{'bob': 2, 'bobette': 1}
+
+Now we want to access the output values. Using this method we pass value = 'bobette' to this function and get
+1 back.
+```
+
+
+
 ## Tip
 * You can key in `tab` to go to the next input field. For example,
