@@ -9,10 +9,10 @@
       date_format: '${1:%Y-%m-%d}'
       default_value: ${2:optional}</string>
   <key>name</key>
-  <string>Field</string>
+  <string>xformer.Field</string>
   <key>scope</key>
   <string>source.yaml</string>
   <key>tabTrigger</key>
-  <string>date format</string>
+  <string>format date</string>
 </dict>
 </plist>
