@@ -38,7 +38,7 @@ During the implementation of your config, the plug-in offers auto-complete featu
 * `delpay_start`: 
 * `get_term_date`: 
 * `to_ascii`: 
-* `conditional`: Used to find the result of a binary operation used on two values within a record
+* `conditional`: Used to find the result of a binary operation used on two values within a record. Available options: eq, contains, le, not_.
 * `to_upper`: 
 * `arithmetic`: 
 * `replace_regex_matches`: 
