@@ -82,4 +82,4 @@ Now we want to access the output values. Using this method we pass value = 'bobe
 
 
 ## Tip
-* You can key in `tab` to go to the next input field. For example,
+* You can press `tab` to cycle through the available inputs.
